@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tanitani</title>
-  <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('bootstrap/css/font-awesome.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('bootstrap/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('bootstrap/css/font-awesome.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('bootstrap/css/style.css') }}">
-	<script src="{{ asset('bootstrap/js/bootstrap.min.js')}}"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tanitani</title>
 
-</head>
-<body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ url('tanitani/petani') }}">Tanitani</a>
+    <!-- Bootstrap -->
+    <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset ('css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/jquery.bxslider.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/set1.css') }}" />
+  <link href="{{ asset('css/overwrite.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style2.css') }}" rel="stylesheet">
+  </head>
+  <body>
+  @include('petani.header')
+   <div class="container">
+    <div class="row">
+    <div class="slider">
+        <div class="img-responsive">
+      @yield('content')
+      </div>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      
-      
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profil</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-home"></span> Data Pengepul</a></li>
-    </ul>
   </div>
-</nav>
- 
-<div class="container">
-  	<div class="row">
-      <!-- jQuery -->
-
-   
-  		@yield('content')
-  	</div>
-  </div>
-<script src="//code.jquery.com/jquery.js"></script>
-<!-- DataTables -->
-<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
- 
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('bootstrap/js/jquery-3.2.1.min.js') }}"></script>
-<script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('bootstrap/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('bootstrap/js/dataTables.bootstrap.min.js') }}"></script>
-</body>
+  @include('petani.footer')
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{asset('js/jquery-2.1.1.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/wow.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{asset('js/jquery.isotope.min.js')}}"></script>
+  <script src="{{asset('js/jquery.bxslider.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/fliplightbox.min.js') }}"></script>
+  <script src="{{asset('js/functions.js') }}"></script> 
+  <script type="text/javascript">$('.portfolio').flipLightBox()</script>
+  <script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#myModal").modal();
+        });
+    });
+  </script>
+  </body>
 </html>
