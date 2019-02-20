@@ -15,13 +15,14 @@ class CreatePengepulsTable extends Migration
     {
        
         Schema::create('pengepuls', function(Blueprint $table){
-            $table->increments('id_pengepul');
+            $table->increments('id');
             $table->string('nama_pengepul');
             $table->integer('id_desa')->unsigned();
-            $table->decimal('longitude', 10,8);
-            $table->decimal('latitude',11, 8);
+            $table->string('longitude');
+            $table->string('latitude');
             $table->text('deskripsi');
             $table->text('foto');
+            $table->timestamps();
 
             
 
